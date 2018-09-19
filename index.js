@@ -11,6 +11,7 @@ var renderCommits = (data) => {
 
 var showCommits = (el) => {
   $.get(`https://api.github.com/repos/${el.dataset.owner}/${el.dataset.repository}/commits`, data => {
+    debugger
     $('#details').html(renderCommits(data))
   }).fail(error => {
     displayError()
